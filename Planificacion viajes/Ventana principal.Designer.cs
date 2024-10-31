@@ -85,7 +85,7 @@
             // 
             // btnAgregarViaje
             // 
-            this.btnAgregarViaje.Location = new System.Drawing.Point(90, 332);
+            this.btnAgregarViaje.Location = new System.Drawing.Point(97, 332);
             this.btnAgregarViaje.Name = "btnAgregarViaje";
             this.btnAgregarViaje.Size = new System.Drawing.Size(110, 23);
             this.btnAgregarViaje.TabIndex = 5;
