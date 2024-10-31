@@ -90,7 +90,7 @@
             this.listBox3.Location = new System.Drawing.Point(167, 323);
             this.listBox3.Margin = new System.Windows.Forms.Padding(2);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(188, 108);
+            this.listBox3.Size = new System.Drawing.Size(188, 121);
             this.listBox3.TabIndex = 4;
             // 
             // listBox4
