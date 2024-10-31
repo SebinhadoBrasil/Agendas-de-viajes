@@ -24,6 +24,7 @@ namespace Planificacion_viajes
         {
             string viaje = txtAgregarViaje.Text.Trim();
 
+
             if (!string.IsNullOrEmpty(viaje))
             {
                 // Verificar si el viaje ya existe en el ListBox
@@ -64,6 +65,8 @@ namespace Planificacion_viajes
 
         private void txtAgregarViaje_TextChanged(object sender, EventArgs e)
         {
+            
+            
         }
 
         private void lstPendientes_SelectedIndexChanged(object sender, EventArgs e)
@@ -85,6 +88,16 @@ namespace Planificacion_viajes
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtfechaida_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtfechavuelta_ValueChanged(object sender, EventArgs e)
         {
 
         }
