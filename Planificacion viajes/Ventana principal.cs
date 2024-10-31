@@ -30,7 +30,7 @@ namespace Planificacion_viajes
                 // Verificar si el viaje ya existe en el ListBox
                 if (!lstPendientes.Items.Contains(viaje))
                 {
-                    lstPendientes.Items.Add(viaje);
+
                     GuardarViaje(viaje);
                     txtAgregarViaje.Clear();
                     button2.Visible=true;
