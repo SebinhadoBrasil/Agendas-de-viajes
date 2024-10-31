@@ -21,17 +21,29 @@ namespace Planificacion_viajes
         }
 
         private void btnAgregarViaje_Click(object sender, EventArgs e)
+
         {
             string viaje = txtAgregarViaje.Text.Trim();
+            string fechaida = dtfechaida.Value.ToString("dd/MM/yyyy");
+            string fechavuelta = dtfechavuelta.Value.ToString("dd/MM/yyyy");
+            string nombreviaje = txtnombreviaje.Text.Trim();
+            string item = $"{viaje} - {fechaida} - {fechavuelta} - {nombreviaje}";
 
+            lstPendientes.Items.Add(item);
+            txtAgregarViaje.Clear();
+            txtnombreviaje.Clear();
 
             if (!string.IsNullOrEmpty(viaje))
             {
                 // Verificar si el viaje ya existe en el ListBox
                 if (!lstPendientes.Items.Contains(viaje))
                 {
-
+                    
                     GuardarViaje(viaje);
+                    GuardarViaje(fechaida);
+                    GuardarViaje(fechavuelta);
+                    GuardarViaje(nombreviaje);
+
                     txtAgregarViaje.Clear();
                     button2.Visible=true;
                 }
