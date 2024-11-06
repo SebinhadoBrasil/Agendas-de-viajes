@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="menu principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu principal.Designer.cs">
+      <DependentUpon>menu principal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventana de registro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <Compile Include="programaritinerario.Designer.cs">
       <DependentUpon>programaritinerario.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="menu principal.resx">
+      <DependentUpon>menu principal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventana de registro.resx">
       <DependentUpon>Ventana de registro.cs</DependentUpon>
     </EmbeddedResource>

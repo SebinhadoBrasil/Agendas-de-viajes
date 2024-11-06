@@ -48,7 +48,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(863, 14);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 28);
             this.button1.TabIndex = 1;
@@ -72,7 +72,7 @@
             this.lstPendientes.FormattingEnabled = true;
             this.lstPendientes.ItemHeight = 16;
             this.lstPendientes.Location = new System.Drawing.Point(428, 192);
-            this.lstPendientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstPendientes.Margin = new System.Windows.Forms.Padding(4);
             this.lstPendientes.Name = "lstPendientes";
             this.lstPendientes.Size = new System.Drawing.Size(505, 244);
             this.lstPendientes.TabIndex = 3;
@@ -91,7 +91,7 @@
             // btnAgregarViaje
             // 
             this.btnAgregarViaje.Location = new System.Drawing.Point(129, 409);
-            this.btnAgregarViaje.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarViaje.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarViaje.Name = "btnAgregarViaje";
             this.btnAgregarViaje.Size = new System.Drawing.Size(147, 28);
             this.btnAgregarViaje.TabIndex = 5;
@@ -102,7 +102,7 @@
             // txtAgregarViaje
             // 
             this.txtAgregarViaje.Location = new System.Drawing.Point(191, 209);
-            this.txtAgregarViaje.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAgregarViaje.Margin = new System.Windows.Forms.Padding(4);
             this.txtAgregarViaje.Name = "txtAgregarViaje";
             this.txtAgregarViaje.Size = new System.Drawing.Size(176, 22);
             this.txtAgregarViaje.TabIndex = 6;
@@ -220,7 +220,8 @@
             this.Controls.Add(this.lstPendientes);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "vtPrincipal";
             this.Text = "Ventana_principal";
             this.ResumeLayout(false);

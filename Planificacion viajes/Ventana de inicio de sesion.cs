@@ -71,5 +71,10 @@ namespace Planificacion_viajes
                 MessageBox.Show("Usuario o contraseña incorrectos.");
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
