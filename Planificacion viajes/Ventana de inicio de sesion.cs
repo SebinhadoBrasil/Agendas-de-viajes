@@ -62,8 +62,8 @@ namespace Planificacion_viajes
             if (credencialesValidas)
             {
                 MessageBox.Show("Inicio de sesión exitoso.");
-                vtPrincipal principalForm = new vtPrincipal(); // Crear la instancia de vtPrincipal
-                principalForm.Show(); // Mostrar la ventana vtPrincipal
+                menu_principal menu_principal = new menu_principal(); // Crear la instancia de vtPrincipal
+                menu_principal.Show(); // Mostrar la ventana vtPrincipal
                 this.Hide(); // Ocultar la ventana de inicio de sesión
             }
             else

@@ -44,12 +44,12 @@ namespace Planificacion_viajes
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Abrirformshija(new vtPrincipal());
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Abrirformshija(new programaritinerario());
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -74,5 +74,23 @@ namespace Planificacion_viajes
                 SendMessage(this.Handle, 0x112, 0xf012, 0);
             
         }
+        private void Abrirformshija(object formhija)
+        {
+            if (this.panelcontenedor2.Controls.Count > 0)
+                this.panelcontenedor2.Controls.RemoveAt(0);
+            Form fh = formhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelcontenedor2.Controls.Add(fh);
+            this.panelcontenedor2.Tag=fh;
+            fh.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Abrirformshija(new ventana_alojamiento());
+        }
     }
+
+
 }

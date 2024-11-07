@@ -78,6 +78,12 @@
     <Compile Include="programaritinerario.Designer.cs">
       <DependentUpon>programaritinerario.cs</DependentUpon>
     </Compile>
+    <Compile Include="ventana_alojamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ventana_alojamiento.Designer.cs">
+      <DependentUpon>ventana_alojamiento.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="menu principal.resx">
       <DependentUpon>menu principal.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="programaritinerario.resx">
       <DependentUpon>programaritinerario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ventana_alojamiento.resx">
+      <DependentUpon>ventana_alojamiento.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

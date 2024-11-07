@@ -12,12 +12,12 @@ namespace Planificacion_viajes
         {
             InitializeComponent();
             CargarViajes();
-            button2.Visible = false;
+            //button2.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            
         }
 
         private void btnAgregarViaje_Click(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace Planificacion_viajes
                     GuardarViaje(nombreviaje);
 
                     txtAgregarViaje.Clear();
-                    button2.Visible=true;
+                    //button2.Visible=true;
                 }
                 else
                 {
@@ -88,9 +88,9 @@ namespace Planificacion_viajes
 
         private void button2_Click(object sender, EventArgs e)
         {
-            programaritinerario programaritinerario = new programaritinerario();
-            programaritinerario.Show();
-            this.Hide();
+            //programaritinerario programaritinerario = new programaritinerario();
+            //programaritinerario.Show();
+            //this.Hide();
 
         }
 
