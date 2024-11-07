@@ -258,6 +258,7 @@
             this.button3.TabIndex = 6;
             this.button3.Text = "Restaurant";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel3
             // 
@@ -337,6 +338,7 @@
             this.panelcontenedor2.Name = "panelcontenedor2";
             this.panelcontenedor2.Size = new System.Drawing.Size(1016, 703);
             this.panelcontenedor2.TabIndex = 2;
+            this.panelcontenedor2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelcontenedor2_Paint);
             // 
             // menu_principal
             // 

@@ -90,6 +90,16 @@ namespace Planificacion_viajes
         {
             Abrirformshija(new ventana_alojamiento());
         }
+
+        private void panelcontenedor2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Abrirformshija(new ventanarestaurante());
+        }
     }
 
 
