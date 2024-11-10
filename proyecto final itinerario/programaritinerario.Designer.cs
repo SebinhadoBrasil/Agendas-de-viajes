@@ -98,7 +98,7 @@
             // 
             this.listBox4.FormattingEnabled = true;
             this.listBox4.ItemHeight = 16;
-            this.listBox4.Location = new System.Drawing.Point(672, 398);
+            this.listBox4.Location = new System.Drawing.Point(658, 398);
             this.listBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox4.Name = "listBox4";
             this.listBox4.Size = new System.Drawing.Size(296, 148);
