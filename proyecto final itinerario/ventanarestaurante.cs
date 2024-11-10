@@ -12,9 +12,20 @@ namespace Planificacion_viajes
 {
     public partial class ventanarestaurante : Form
     {
+
+        class panaderia
+        { }
+
         public ventanarestaurante()
         {
             InitializeComponent();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            //mepicaelcoco
+        }
+
+
     }
 }
