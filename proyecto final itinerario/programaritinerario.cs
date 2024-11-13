@@ -34,6 +34,10 @@ namespace Planificacion_viajes
         private void button3_Click(object sender, EventArgs e)
         {
             string LugaresP = textBox1.Text.Trim();
+            string FechaSalida = dtFechaSalida.Value.ToString("dd/MM/yyyy");
+            string FechaLlegada = dtFechaLlegada.Value.ToString("dd/MM/yyyy");
+
+            string item = $"{LugaresP} - {FechaSalida} - {FechaLlegada}";
 
             if (!string.IsNullOrEmpty(LugaresP))
             {
