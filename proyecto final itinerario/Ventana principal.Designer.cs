@@ -46,17 +46,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(152, 36);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 29.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(135, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(393, 43);
+            this.label1.Size = new System.Drawing.Size(485, 46);
             this.label1.TabIndex = 2;
             this.label1.Text = "Planificación de Destino";
             // 
             // lstPendientes
             // 
             this.lstPendientes.FormattingEnabled = true;
-            this.lstPendientes.Location = new System.Drawing.Point(290, 157);
+            this.lstPendientes.Location = new System.Drawing.Point(305, 156);
             this.lstPendientes.Name = "lstPendientes";
             this.lstPendientes.Size = new System.Drawing.Size(338, 199);
             this.lstPendientes.TabIndex = 3;
@@ -65,20 +65,24 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(297, 126);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(367, 111);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
+            this.label2.Size = new System.Drawing.Size(178, 30);
             this.label2.TabIndex = 4;
             this.label2.Text = "Lista de viajes";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnAgregarViaje
             // 
-            this.btnAgregarViaje.Location = new System.Drawing.Point(97, 332);
+            this.btnAgregarViaje.BackColor = System.Drawing.Color.Lavender;
+            this.btnAgregarViaje.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarViaje.Location = new System.Drawing.Point(143, 326);
             this.btnAgregarViaje.Name = "btnAgregarViaje";
-            this.btnAgregarViaje.Size = new System.Drawing.Size(110, 23);
+            this.btnAgregarViaje.Size = new System.Drawing.Size(122, 29);
             this.btnAgregarViaje.TabIndex = 5;
             this.btnAgregarViaje.Text = "Agregar plan";
-            this.btnAgregarViaje.UseVisualStyleBackColor = true;
+            this.btnAgregarViaje.UseVisualStyleBackColor = false;
             this.btnAgregarViaje.Click += new System.EventHandler(this.btnAgregarViaje_Click);
             // 
             // txtAgregarViaje
@@ -94,7 +98,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(38, 173);
+            this.label3.Location = new System.Drawing.Point(45, 173);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 17);
@@ -104,10 +108,10 @@
             // dtfechaida
             // 
             this.dtfechaida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtfechaida.Location = new System.Drawing.Point(159, 208);
-            this.dtfechaida.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtfechaida.Location = new System.Drawing.Point(143, 208);
+            this.dtfechaida.Margin = new System.Windows.Forms.Padding(2);
             this.dtfechaida.Name = "dtfechaida";
-            this.dtfechaida.Size = new System.Drawing.Size(102, 20);
+            this.dtfechaida.Size = new System.Drawing.Size(133, 20);
             this.dtfechaida.TabIndex = 9;
             this.dtfechaida.ValueChanged += new System.EventHandler(this.dtfechaida_ValueChanged);
             // 
@@ -128,7 +132,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label5.Location = new System.Drawing.Point(22, 244);
+            this.label5.Location = new System.Drawing.Point(19, 244);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(117, 17);
@@ -138,10 +142,10 @@
             // dtfechavuelta
             // 
             this.dtfechavuelta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtfechavuelta.Location = new System.Drawing.Point(159, 244);
-            this.dtfechavuelta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtfechavuelta.Location = new System.Drawing.Point(143, 244);
+            this.dtfechavuelta.Margin = new System.Windows.Forms.Padding(2);
             this.dtfechavuelta.Name = "dtfechavuelta";
-            this.dtfechavuelta.Size = new System.Drawing.Size(102, 20);
+            this.dtfechavuelta.Size = new System.Drawing.Size(133, 20);
             this.dtfechavuelta.TabIndex = 12;
             this.dtfechavuelta.ValueChanged += new System.EventHandler(this.dtfechavuelta_ValueChanged);
             // 
@@ -150,7 +154,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label6.Location = new System.Drawing.Point(20, 111);
+            this.label6.Location = new System.Drawing.Point(43, 111);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(164, 27);
@@ -162,7 +166,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label7.Location = new System.Drawing.Point(20, 280);
+            this.label7.Location = new System.Drawing.Point(17, 280);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(119, 17);
@@ -172,7 +176,7 @@
             // txtnombreviaje
             // 
             this.txtnombreviaje.Location = new System.Drawing.Point(143, 280);
-            this.txtnombreviaje.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnombreviaje.Margin = new System.Windows.Forms.Padding(2);
             this.txtnombreviaje.Name = "txtnombreviaje";
             this.txtnombreviaje.Size = new System.Drawing.Size(133, 20);
             this.txtnombreviaje.TabIndex = 15;

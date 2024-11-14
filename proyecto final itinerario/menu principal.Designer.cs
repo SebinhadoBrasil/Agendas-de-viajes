@@ -70,16 +70,17 @@
             this.barra_titulo.Controls.Add(this.botoncerrar);
             this.barra_titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barra_titulo.Location = new System.Drawing.Point(0, 0);
-            this.barra_titulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barra_titulo.Margin = new System.Windows.Forms.Padding(2);
             this.barra_titulo.Name = "barra_titulo";
             this.barra_titulo.Size = new System.Drawing.Size(938, 38);
             this.barra_titulo.TabIndex = 0;
+            this.barra_titulo.Paint += new System.Windows.Forms.PaintEventHandler(this.barra_titulo_Paint);
             this.barra_titulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barra_titulo_MouseDown);
             // 
             // panel6
             // 
             this.panel6.Location = new System.Drawing.Point(173, 38);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(150, 81);
             this.panel6.TabIndex = 2;
@@ -90,7 +91,7 @@
             this.botonrestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botonrestaurar.Image = ((System.Drawing.Image)(resources.GetObject("botonrestaurar.Image")));
             this.botonrestaurar.Location = new System.Drawing.Point(879, 10);
-            this.botonrestaurar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.botonrestaurar.Margin = new System.Windows.Forms.Padding(2);
             this.botonrestaurar.Name = "botonrestaurar";
             this.botonrestaurar.Size = new System.Drawing.Size(22, 24);
             this.botonrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -105,7 +106,7 @@
             this.botonmaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botonmaximizar.Image = ((System.Drawing.Image)(resources.GetObject("botonmaximizar.Image")));
             this.botonmaximizar.Location = new System.Drawing.Point(879, 10);
-            this.botonmaximizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.botonmaximizar.Margin = new System.Windows.Forms.Padding(2);
             this.botonmaximizar.Name = "botonmaximizar";
             this.botonmaximizar.Size = new System.Drawing.Size(22, 24);
             this.botonmaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -119,7 +120,7 @@
             this.botonminimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botonminimizar.Image = ((System.Drawing.Image)(resources.GetObject("botonminimizar.Image")));
             this.botonminimizar.Location = new System.Drawing.Point(854, 10);
-            this.botonminimizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.botonminimizar.Margin = new System.Windows.Forms.Padding(2);
             this.botonminimizar.Name = "botonminimizar";
             this.botonminimizar.Size = new System.Drawing.Size(22, 24);
             this.botonminimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -133,7 +134,7 @@
             this.botoncerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botoncerrar.Image = ((System.Drawing.Image)(resources.GetObject("botoncerrar.Image")));
             this.botoncerrar.Location = new System.Drawing.Point(906, 10);
-            this.botoncerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.botoncerrar.Margin = new System.Windows.Forms.Padding(2);
             this.botoncerrar.Name = "botoncerrar";
             this.botoncerrar.Size = new System.Drawing.Size(22, 24);
             this.botoncerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -160,16 +161,17 @@
             this.menu_vertical.Controls.Add(this.pictureBox1);
             this.menu_vertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.menu_vertical.Location = new System.Drawing.Point(0, 38);
-            this.menu_vertical.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.menu_vertical.Margin = new System.Windows.Forms.Padding(2);
             this.menu_vertical.Name = "menu_vertical";
             this.menu_vertical.Size = new System.Drawing.Size(176, 571);
             this.menu_vertical.TabIndex = 1;
+            this.menu_vertical.Paint += new System.Windows.Forms.PaintEventHandler(this.menu_vertical_Paint);
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel7.Location = new System.Drawing.Point(0, 493);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(11, 41);
             this.panel7.TabIndex = 8;
@@ -185,7 +187,7 @@
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(9, 493);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(167, 41);
             this.button1.TabIndex = 11;
@@ -197,7 +199,7 @@
             // panelcontenedor
             // 
             this.panelcontenedor.Location = new System.Drawing.Point(176, 2);
-            this.panelcontenedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelcontenedor.Margin = new System.Windows.Forms.Padding(2);
             this.panelcontenedor.Name = "panelcontenedor";
             this.panelcontenedor.Size = new System.Drawing.Size(591, 485);
             this.panelcontenedor.TabIndex = 9;
@@ -206,7 +208,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel5.Location = new System.Drawing.Point(0, 388);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(11, 41);
             this.panel5.TabIndex = 7;
@@ -222,7 +224,7 @@
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(9, 388);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(167, 41);
             this.button5.TabIndex = 8;
@@ -234,7 +236,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel4.Location = new System.Drawing.Point(0, 318);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(11, 41);
             this.panel4.TabIndex = 6;
@@ -250,7 +252,7 @@
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(9, 249);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(167, 41);
             this.button4.TabIndex = 7;
@@ -269,7 +271,7 @@
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(9, 318);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(167, 41);
             this.button3.TabIndex = 6;
@@ -281,7 +283,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel3.Location = new System.Drawing.Point(0, 249);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(11, 41);
             this.panel3.TabIndex = 5;
@@ -290,7 +292,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel2.Location = new System.Drawing.Point(0, 180);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(11, 41);
             this.panel2.TabIndex = 4;
@@ -300,7 +302,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel1.Location = new System.Drawing.Point(0, 115);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(11, 41);
             this.panel1.TabIndex = 2;
@@ -316,7 +318,7 @@
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(9, 180);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(167, 41);
             this.button2.TabIndex = 3;
@@ -335,7 +337,7 @@
             this.btndestino.Image = ((System.Drawing.Image)(resources.GetObject("btndestino.Image")));
             this.btndestino.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btndestino.Location = new System.Drawing.Point(9, 115);
-            this.btndestino.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btndestino.Margin = new System.Windows.Forms.Padding(2);
             this.btndestino.Name = "btndestino";
             this.btndestino.Size = new System.Drawing.Size(167, 41);
             this.btndestino.TabIndex = 1;
@@ -347,18 +349,19 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-2, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(176, 75);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panelcontenedor2
             // 
             this.panelcontenedor2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelcontenedor2.Location = new System.Drawing.Point(176, 38);
-            this.panelcontenedor2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelcontenedor2.Margin = new System.Windows.Forms.Padding(2);
             this.panelcontenedor2.Name = "panelcontenedor2";
             this.panelcontenedor2.Size = new System.Drawing.Size(762, 571);
             this.panelcontenedor2.TabIndex = 2;
@@ -374,7 +377,7 @@
             this.Controls.Add(this.menu_vertical);
             this.Controls.Add(this.barra_titulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "menu_principal";
             this.Text = "menu_principal";
             this.Load += new System.EventHandler(this.menu_principal_Load);

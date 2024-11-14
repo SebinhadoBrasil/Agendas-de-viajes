@@ -110,6 +110,21 @@ namespace Planificacion_viajes
         {
 
         }
+
+        private void menu_vertical_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void barra_titulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
