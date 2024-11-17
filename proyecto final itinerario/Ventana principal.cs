@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Planificacion_viajes
@@ -12,49 +14,39 @@ namespace Planificacion_viajes
         {
             InitializeComponent();
             CargarViajes();
-            //button2.Visible = false;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void btnAgregarViaje_Click(object sender, EventArgs e)
-
         {
-            string viaje = txtAgregarViaje.Text.Trim();
-            string fechaida = dtfechaida.Value.ToString("dd/MM/yyyy");
-            string fechavuelta = dtfechavuelta.Value.ToString("dd/MM/yyyy");
-            string nombreviaje = txtnombreviaje.Text.Trim();
-            string item = $"{viaje} - {fechaida} - {fechavuelta} - {nombreviaje}";
+            string destino = txtAgregarViaje.Text.Trim();
+            string fechaIda = dtfechaida.Value.ToString("dd/MM/yyyy");
+            string fechaVuelta = dtfechavuelta.Value.ToString("dd/MM/yyyy");
+            string nombreViaje = txtnombreviaje.Text.Trim();
 
-            lstPendientes.Items.Add(item);
-            txtAgregarViaje.Clear();
-            txtnombreviaje.Clear();
-
-            if (!string.IsNullOrEmpty(viaje))
+            if (string.IsNullOrEmpty(destino) || string.IsNullOrEmpty(nombreViaje))
             {
-                // Verificar si el viaje ya existe en el ListBox
-                if (!lstPendientes.Items.Contains(viaje))
-                {
-                    
-                    GuardarViaje(viaje);
-                    GuardarViaje(fechaida);
-                    GuardarViaje(fechavuelta);
-                    GuardarViaje(nombreviaje);
+                MessageBox.Show("Por favor, completa todos los campos.");
+                return;
+            }
 
-                    txtAgregarViaje.Clear();
-                    //button2.Visible=true;
-                }
-                else
-                {
-                    MessageBox.Show("Este viaje ya ha sido agregado.");
-                }
+            if (dtfechaida.Value >= dtfechavuelta.Value)
+            {
+                MessageBox.Show("La fecha de ida debe ser anterior a la fecha de vuelta.");
+                return;
+            }
+
+            string item = $"{destino} - {fechaIda} - {fechaVuelta} - {nombreViaje}";
+
+            if (!lstPendientes.Items.Contains(item))
+            {
+                lstPendientes.Items.Add(item);
+                GuardarViaje(item);
+                LimpiarCampos();
+                MessageBox.Show("El viaje se agregó correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Por favor, ingresa un viaje.");
+                MessageBox.Show("Este viaje ya ha sido agregado.");
             }
         }
 
@@ -62,56 +54,141 @@ namespace Planificacion_viajes
         {
             if (File.Exists(rutaArchivo))
             {
-                string[] viajes = File.ReadAllLines(rutaArchivo);
-                lstPendientes.Items.AddRange(viajes);
+                try
+                {
+                    string[] lineas = File.ReadAllLines(rutaArchivo);
+                    foreach (string linea in lineas)
+                    {
+                        if (!string.IsNullOrWhiteSpace(linea))
+                        {
+                            lstPendientes.Items.Add(linea);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al cargar los viajes: {ex.Message}");
+                }
             }
         }
 
-        private void GuardarViaje(string viaje)
+        private void GuardarViaje(string item)
         {
-            using (StreamWriter writer = new StreamWriter(rutaArchivo, true))
+            try
             {
-                writer.WriteLine(viaje);
+                using (StreamWriter writer = new StreamWriter(rutaArchivo, true))
+                {
+                    writer.WriteLine(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al guardar el viaje: {ex.Message}");
             }
         }
 
-        private void txtAgregarViaje_TextChanged(object sender, EventArgs e)
+        private void LimpiarCampos()
         {
-            
-            
+            txtAgregarViaje.Clear();
+            txtnombreviaje.Clear();
+            dtfechaida.Value = DateTime.Now;
+            dtfechavuelta.Value = DateTime.Now;
         }
 
-        private void lstPendientes_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnEliminarViaje_Click(object sender, EventArgs e)
         {
+            if (lstPendientes.SelectedItem != null)
+            {
+                string itemSeleccionado = lstPendientes.SelectedItem.ToString();
 
+                DialogResult confirmacion = MessageBox.Show(
+                    "¿Estás seguro de que deseas eliminar este viaje?",
+                    "Confirmar eliminación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                if (confirmacion == DialogResult.Yes)
+                {
+                    lstPendientes.Items.Remove(itemSeleccionado);
+
+                    if (File.Exists(rutaArchivo))
+                    {
+                        try
+                        {
+                            var lineas = File.ReadAllLines(rutaArchivo).ToList();
+                            lineas.Remove(itemSeleccionado);
+                            File.WriteAllLines(rutaArchivo, lineas);
+                            MessageBox.Show("El viaje ha sido eliminado.", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error al eliminar el viaje: {ex.Message}");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un viaje para eliminar.");
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void eliminarPlan_Click(object sender, EventArgs e)
         {
-            //programaritinerario programaritinerario = new programaritinerario();
-            //programaritinerario.Show();
-            //this.Hide();
+            if (lstPendientes.SelectedItem != null)
+            {
+                string itemSeleccionado = lstPendientes.SelectedItem.ToString();
 
-        }
+                DialogResult confirmacion = MessageBox.Show(
+                    "¿Estás seguro de que deseas eliminar este viaje?",
+                    "Confirmar eliminación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
+                if (confirmacion == DialogResult.Yes)
+                {
+                    lstPendientes.Items.Remove(itemSeleccionado);
 
+                    if (File.Exists(rutaArchivo))
+                    {
+                        try
+                        {
+                            var lineas = File.ReadAllLines(rutaArchivo).ToList();
+                            lineas.Remove(itemSeleccionado);
+                            File.WriteAllLines(rutaArchivo, lineas);
+                            MessageBox.Show("El viaje ha sido eliminado.", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error al eliminar el viaje: {ex.Message}");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor selecciona un viaje para eliminar.");
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+        }
 
+        private void lstPendientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txtAgregarViaje_TextChanged(object sender, EventArgs e)
+        {
         }
 
         private void dtfechaida_ValueChanged(object sender, EventArgs e)
         {
-
         }
 
         private void dtfechavuelta_ValueChanged(object sender, EventArgs e)
         {
-
         }
     }
 }
