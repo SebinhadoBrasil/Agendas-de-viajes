@@ -32,46 +32,9 @@ namespace Planificacion_viajes
 
         }
 
-        private void MetPagar_SelectedIndexChanged(object sender, EventArgs e)
-        {
+
 
         }
-
-        private void SelecMenu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string producto = SelecMenu.Text; //definimos nombre del combobos
-
-            //asociación de productos y valores
-            if (producto.Equals("PACHAMANCA")) precio = 30; //si el producto es igual a pachamanca entonces el precio es de S/45
-            if (producto.Equals("AJI DE GALLINA")) precio = 22;
-            if (producto.Equals("JARRA DE CHICHA MORADA")) precio = 15;
-            if (producto.Equals("COMBINADO")) precio = 20;
-            if (producto.Equals("CEVICHE")) precio = 14;
         }
 
-        private void txtCantidad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //capturando datos de lo que fue seleccionado
-            String productos = AllBox.Text;
-            int Cantidad = Convert.ToInt32(txtCantidad.Text);
-
-            //procesar calculos
-            double subtotal = Cantidad * precio;
-            double preciofinal = subtotal;
-
-            //impresión de resultado
-            ListViewItem fila = new ListViewItem(productos);
-            fila.SubItems.Add(Cantidad.ToString());
-            fila.SubItems.Add(precio.ToString());
-            fila.SubItems.Add(preciofinal.ToString());
-
-            lvRestaurante.Items.Add(fila);
             
-        }
-    }
-}
