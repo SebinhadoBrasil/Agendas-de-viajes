@@ -31,15 +31,22 @@ namespace Planificacion_viajes
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        public void button3_Click(object sender, EventArgs e)
         {
             string LugaresP = textBox1.Text.Trim();
+            string FechaSalida = dtFechaSalida.Value.ToString("dd/MM/yyyy");
+            string FechaLlegada = dtFechaRegreso.Value.ToString("dd/MM/yyyy");
+
+            string item = $"{LugaresP} - {FechaSalida} - {FechaLlegada}";
+            listLugaresPendientes.Items.Add(item);
+            textBox1.Clear();
+
 
             if (!string.IsNullOrEmpty(LugaresP))
             {
-                if (!listBox1.Items.Contains(LugaresP))
+                if (!listLugaresPendientes.Items.Contains(LugaresP))
                 {
-                    listBox1.Items.Add(LugaresP);
+                    listLugaresPendientes.Items.Add(LugaresP);
                     GuardarLugaresPe(LugaresP);
                     textBox1.Clear();
                 }
@@ -62,7 +69,7 @@ namespace Planificacion_viajes
             if (File.Exists(rutaArchivo2))
             {
                 string[] LugaresP = File.ReadAllLines(rutaArchivo2);
-                listBox1.Items.AddRange(LugaresP);
+                listLugaresPendientes.Items.AddRange(LugaresP);
             }
         }
         private void GuardarLugaresPe(string LugaresP)
@@ -71,6 +78,26 @@ namespace Planificacion_viajes
             {
                 writer.WriteLine(LugaresP);
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void dtFechaSalida_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void dtFechaLlegada_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
     

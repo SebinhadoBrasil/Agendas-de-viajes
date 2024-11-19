@@ -74,6 +74,7 @@
             this.barra_titulo.Name = "barra_titulo";
             this.barra_titulo.Size = new System.Drawing.Size(938, 38);
             this.barra_titulo.TabIndex = 0;
+            this.barra_titulo.Paint += new System.Windows.Forms.PaintEventHandler(this.barra_titulo_Paint);
             this.barra_titulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barra_titulo_MouseDown);
             // 
             // panel6
@@ -164,6 +165,7 @@
             this.menu_vertical.Name = "menu_vertical";
             this.menu_vertical.Size = new System.Drawing.Size(176, 571);
             this.menu_vertical.TabIndex = 1;
+            this.menu_vertical.Paint += new System.Windows.Forms.PaintEventHandler(this.menu_vertical_Paint);
             // 
             // panel7
             // 
@@ -192,6 +194,7 @@
             this.button1.Text = "Guardar y mostrar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // panelcontenedor
             // 
@@ -227,6 +230,7 @@
             this.button5.TabIndex = 8;
             this.button5.Text = "Transporte";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel4
             // 
@@ -351,6 +355,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panelcontenedor2
             // 

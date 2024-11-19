@@ -100,6 +100,31 @@ namespace Planificacion_viajes
         {
             Abrirformshija(new ventanarestaurante());
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menu_vertical_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void barra_titulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
