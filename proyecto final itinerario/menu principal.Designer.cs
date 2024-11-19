@@ -379,6 +379,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "menu_principal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "menu_principal";
             this.Load += new System.EventHandler(this.menu_principal_Load);
             this.barra_titulo.ResumeLayout(false);
